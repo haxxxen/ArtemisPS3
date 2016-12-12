@@ -45,7 +45,7 @@ all:
 	$(MAKE) $(PPU_OBJS_DEPENDS)
 	$(PPU_PRX_STRIP) --strip-debug --strip-section-header $(PPU_PRX_TARGET)
 	#make_self_wc2 a -c -k04 -034100 -a1070000052000001 -s3.40.0 -x40 -z02 -o/d/mm/multiman/release/sec_pad.bin -p/d/mm/multiman/release/cap_flag.bin $(PPU_PRX_TARGET) $(PPU_SPRX_TARGET)
-	scetool -0 SELF -1 TRUE -s FALSE -2 04 -3 1070000052000001 -4 01000002 -5 APP -6 0003004000000000 -A 0001000000000000 -e $(PPU_PRX_TARGET) $(PPU_SPRX_TARGET)
+	./scetool -0 SELF -1 TRUE -s FALSE -2 04 -3 1070000052000001 -4 01000002 -5 APP -6 0003004000000000 -A 0001000000000000 -e $(PPU_PRX_TARGET) $(PPU_SPRX_TARGET)
 	
 include $(CELL_MK_DIR)/sdk.target.mk
 
