@@ -1077,7 +1077,7 @@ static void art_thread(uint64_t arg)
 	printf("Artemis PS3 :::: Thread Started!\n");
 
 	sys_timer_sleep(10);
-	sys_ppu_thread_yield();
+	// sys_ppu_thread_yield();
 
 	CellPadData data;
 	CellPadInfo2 info;
@@ -1109,7 +1109,7 @@ static void art_thread(uint64_t arg)
 					for (int x = 0; x < (10 * 100); x++) //10 second delay
 					{
 						sys_timer_usleep(10000);
-						sys_ppu_thread_yield();
+						// sys_ppu_thread_yield();
 					}
 
 
@@ -1154,7 +1154,7 @@ static void art_thread(uint64_t arg)
 									break;
 
 								sys_timer_usleep(1000000);
-								sys_ppu_thread_yield();
+								// sys_ppu_thread_yield();
 							}
 						}
 						else
@@ -1188,7 +1188,7 @@ static void art_thread(uint64_t arg)
 
 		lastGameProcessID = GameProcessID;
 		sys_timer_usleep(1668);
-		sys_ppu_thread_yield();
+		// sys_ppu_thread_yield();
 	}
 
 	destroy_heap();
